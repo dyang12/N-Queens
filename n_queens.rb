@@ -8,8 +8,7 @@ class NQueens
     @solutions = 0
     @iterations = 0
     put_queen(0)
-    puts "number of iterations: #{@iterations}"
-    puts "number of solutions: #{@solutions}"
+    display_stats
   end
   
   def put_queen(row)
@@ -83,5 +82,10 @@ class NQueens
     end
     
     puts queen_positions.map { |pos| pos.to_s }.join(", ")
+  end
+  
+  def display_stats
+    puts "number of iterations: #{@iterations}"
+    puts "number of solutions: #{@solutions}"
   end
 end
